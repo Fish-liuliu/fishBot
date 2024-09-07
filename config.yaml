@@ -1,0 +1,4 @@
+appid: 102346679
+token: E6bivphD55C6ozpyyQX2obvFuUqVHx6x
+mysqlConnect: root:123456@tcp(127.0.0.1:3306)/fishbot?charset=utf8mb4&parseTime=True&loc=Local
+redisConnect: localhost:6379

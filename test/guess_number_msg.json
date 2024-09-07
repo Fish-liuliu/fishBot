@@ -1,0 +1,37 @@
+{
+  "op": 0,
+  "s": 2,
+  "t": "AT_MESSAGE_CREATE",
+  "id": "AT_MESSAGE_CREATE:433dd4e1-d63b-4463-9f37-e162c7c7849a",
+  "d": {
+    "author": {
+      "avatar": "http://thirdqq.qlogo.cn/g?b=oidb&k=0iam2QqoaDPjvL7iaKDXUaSg&kti=ZtlmhwwBHsA&s=0&t=1555471059",
+      "bot": false,
+      "id": "11667722671262063122",
+      "username": "心温。"
+    },
+    "channel_id": "656136529",
+    "content": "<@!4916517924291754173>/告诉我猜数字的答案",
+    "guild_id": "2865164781558049482",
+    "id": "08cad5e89d8486c7e12710d1b2efb8023834488cb5ebb606",
+    "member": {
+      "joined_at": "2024-09-06T11:32:11+08:00",
+      "nick": "心温。",
+      "roles": [
+        "2",
+        "14"
+      ]
+    },
+    "mentions": [
+      {
+        "avatar": "http://thirdqq.qlogo.cn/g?b=oidb&k=PibgkTCS9vYibicKt4y5luNnA&kti=ZtraMgwBHsA&s=0&t=1725520841",
+        "bot": true,
+        "id": "4916517924291754173",
+        "username": "xubyRobot-测试中"
+      }
+    ],
+    "seq": 52,
+    "seq_in_channel": "52",
+    "timestamp": "2024-09-06T18:33:48+08:00"
+  }
+}
