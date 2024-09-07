@@ -87,7 +87,7 @@ func (r *RobotBussiness) cmdHandle(match []string, userId, userName string) (str
 			log.Println("从缓存中查找答案，并清空缓存")
 			if exists := r.cache.Exists(context.TODO(), constant.NUMKEY).Val(); exists == 0 {
 				log.Println("缓存中还没数据")
-				replyContent = "你还没开始游戏，我怎么告诉你答案"
+				replyContent = "你还没开始游戏，输入无效"
 			} else {
 				answer := r.cache.Get(context.TODO(), constant.NUMKEY).Val()
 				replyContent = fmt.Sprintf("答案是：%s", answer)

@@ -4,26 +4,6 @@ import (
 	"time"
 )
 
-/*
-鉴权 example
-{
-  "op": 0,
-  "s": 1,
-  "t": "READY",
-  "d": {
-    "version": 1,
-    "session_id": "082ee18c-0be3-491b-9d8b-fbd95c51673a",
-    "user": {
-      "id": "6158788878435714165",
-      "username": "群pro测试机器人",
-      "bot": true
-    },
-    "shard": [0, 0]
-  }
-}
-
-*/
-
 // Message 消息结构体定义
 type Message struct {
 	// 消息ID
