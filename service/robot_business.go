@@ -118,12 +118,21 @@ func (r *RobotBussiness) cmdHandle(match []string, userId, userName string) (str
 		case "我的考勤记录":
 			// 捞取这个月打卡记录
 			attendance := &dao.Attendance{}
-			attendances, err := attendance.GetAttendances(r.Db, userId)
+			checkAttendance, err := attendance.CheckAttendance(r.Db, userId)
 			if err != nil {
 				return "", err
 			}
-			checkedInDays, noCheckInDays := attendance.CountAttendance(attendances)
-			replyContent = fmt.Sprintf("你这个月打卡 %d 天，未打卡 %d", checkedInDays, noCheckInDays)
+			if !checkAttendance {
+				// 如果当天已经打卡了
+				replyContent = "这个月你还没有打卡"
+			} else {
+				attendances, err := attendance.GetAttendances(r.Db, userId)
+				if err != nil {
+					return "", err
+				}
+				checkedInDays, noCheckInDays := attendance.CountAttendance(attendances)
+				replyContent = fmt.Sprintf("你这个月打卡 %d 天，未打卡 %d", checkedInDays, noCheckInDays)
+			}
 		}
 	} else {
 		// 先检测键是否过期
